@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yulun Wu - About Me</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="nav-desktop">
+            <span class="title" style="color: #fff;"><h3>Yulun Wu</h3></span>
+            <ul>
+                <li><a href="" style="color: #fff;">About</a></li>
+                <li><a href="#news" style="color: #fff;">News</a></li>
+                <li><a href="#publications" style="color: #fff;">Publications</a></li>
+                <li><a href="#service" style="color: #fff;">Service</a></li>
+            </ul>
+        </div>
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="" style="color: #fff;" onclick="toggleMenu()">About</a></li>
+                <li><a href="#news" style="color: #fff;" onclick="toggleMenu()">News</a></li>
+                <li><a href="#publications" style="color: #fff;" onclick="toggleMenu()">Publications</a></li>
+                <li><a href="#service" style="color: #fff;" onclick="toggleMenu()">Service</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section">
+            <div class="profile-header">
+                <img src="media/profile.jpg" alt="Yulun Wu" class="profile-img">
+                <div>
+                    <h1>Yulun Wu (吴宇伦)</h1>
+                    <p style="color: #555;">
+                        I am currently a final-year Master student at the <a href="https://www.thss.tsinghua.edu.cn/en/">School of Software</a>, <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>. I hold a B.E. degree from the <a href="https://www.au.tsinghua.edu.cn/en/">Department of Automation</a>, Tsinghua University. My research interests mainly revolve around the area of 3D computer vision and graphics, with a particular focus on 3D reconstruction and generative models. I am also interested in scene understanding, perception and processing with multimodal intelligence.
+                    </p>
+                    <div class="social-links">
+                        <a href="mailto:wuyulun0108@outlook.com" class="social-link email">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=F_QtB-IAAAAJ" target="_blank" class="social-link scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Scholar</span>
+                        </a>
+                        <a href="https://github.com/yulunwu0108/" target="_blank" class="social-link github">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yulun-wu-a49166331/" target="_blank" class="social-link linkedin">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://yulunwu0108.github.io/resume.pdf" target="_blank" class="social-link cv">
+                            <i class="fa-solid fa-file"></i>
+                            <span>Curriculum Vitae</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="section">
+            <h2>News</h2>
+            <p style="color: #555;">
+                <b>- [Pinned]</b> <font style="color: red;">I'm actively seeking for a PhD position for 2025 Fall.</font><br>
+                <b>- [Dec. 2024]</b> <a href="https://alvin528.github.io/FatesGS/">FatesGS</a> and <a href="https://yulunwu0108.github.io/Sparis/">Sparis</a> on multi-view reconstruction are accepted to <a href="https://aaai.org/conference/aaai/aaai-25/">AAAI 2025</a>.
+            </p>
+        </section>
+
+        <section id="publications" class="section">
+            <h2>Selected Publications <small style="color: #999;">(*equal contribution)</small></h2>
+            <ul class="publication-list" style="color: #666;">
+                <li>
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <h4>FatesGS: Fast and Accurate Sparse-View Surface Reconstruction using Gaussian Splatting with Depth-Feature Consistency</h4>
+                            <p class="authors">
+                                <a href="https://github.com/alvin528">Han Huang</a>*,
+                                <b>Yulun Wu</b>*,
+                                Chao Deng,
+                                Ge Gao,
+                                Ming Gu,
+                                <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>
+                            </p>
+                            <p class="journal"><em>AAAI Conference on Artificial Intelligence (AAAI)</em>, 2025</p>
+                            <div class="link">
+                                <p><a href="https://alvin528.github.io/FatesGS/" class="button-link">Project Page</a> <a href="https://arxiv.org/abs/2501.04628" class="button-link">arXiv</a> <a href="https://github.com/yulunwu0108/FatesGS" class="button-link">Code</a></p>
+                            </div>
+                        </div>
+                        <div class="publication-figure">
+                            <img src="media/fatesgs.png" alt="FatesGS">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <h4>Sparis: Neural Implicit Surface Reconstruction of Indoor Scenes from Sparse Views</h4>
+                            <p class="authors">
+                                <b>Yulun Wu</b>*,
+                                <a href="https://github.com/alvin528">Han Huang</a>*,
+                                <a href="https://wen-yuan-zhang.github.io/">Wenyuan Zhang</a>,
+                                Chao Deng,
+                                Ge Gao,
+                                Ming Gu,
+                                <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>
+                            </p>
+                            <p class="journal"><em>AAAI Conference on Artificial Intelligence (AAAI)</em>, 2025</p>
+                            <div class="link">
+                                <p><a href="https://yulunwu0108.github.io/Sparis/" class="button-link">Project Page</a> <a href="https://arxiv.org/abs/2501.01196" class="button-link">arXiv</a> <a href="https://github.com/yulunwu0108/Sparis" class="button-link">Code</a></p>
+                            </div>
+                        </div>
+                        <div class="publication-figure">
+                            <img src="media/sparis.png" alt="Sparis">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <h4>NeuSurf: On-Surface Priors for Neural Surface Reconstruction from Sparse Input Views</h4>
+                            <p class="authors">
+                                <a href="https://github.com/alvin528">Han Huang</a>,
+                                <b>Yulun Wu</b>,
+                                <a href="https://junshengzhou.github.io/">Junsheng Zhou</a>,
+                                Ge Gao,
+                                Ming Gu,
+                                <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>
+                            </p>
+                            <p class="journal"><em>AAAI Conference on Artificial Intelligence (AAAI)</em>, 2024</p>
+                            <div class="link">
+                                <p><a href="https://alvin528.github.io/NeuSurf/" class="button-link">Project Page</a> <a href="https://arxiv.org/abs/2312.13977" class="button-link">arXiv</a> <a href="https://github.com/yulunwu0108/NeuSurf" class="button-link">Code</a></p>
+                            </div>
+                        </div>
+                        <div class="publication-figure">
+                            <img src="media/neusurf.png" alt="NeuSurf">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="service" class="section">
+            <h2>Service</h2>
+            <p style="color: #555;">
+                <b>Conference Reviewer:</b> ICME 2025
+            </p>
+        </section>
+
+        <script type='text/javascript' id='mapmyvisitors'
+            src='https://mapmyvisitors.com/map.js?cl=ffffff&w=300&t=tt&d=DM2EXCFajQFwfyMHSI7bmCyqi8qcR6ptx-GMC3ETlYI&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
+
+        <br><p style="text-align: center;">&copy 2025 Yulun Wu. The <a href="https://github.com/yulunwu0108/yulunwu0108.github.io" target="_blank">source code</a> of this page is under the MIT License.</p>
+        <p style="text-align: center;">Last updated: Feb. 2025</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            const mobileMenu = document.querySelector('.nav-mobile');
+            nav.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+
+            // 自动关闭菜单点击外部区域
+            if (nav.classList.contains('active')) {
+                setTimeout(() => {
+                    document.addEventListener('click', closeMenuOnClickOutside);
+                }, 10);
+            }
+        }
+
+        function closeMenuOnClickOutside(e) {
+            if (!e.target.closest('nav')) {
+                toggleMenu();
+                document.removeEventListener('click', closeMenuOnClickOutside);
+            }
+        }
+
+        // 动态调整容器间距
+        function adjustContainerMargin() {
+            const navHeight = document.querySelector('nav').offsetHeight;
+            document.querySelector('.container').style.marginTop = `${navHeight}px`;
+
+            // 同步更新滚动边距
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.scrollMarginTop = `${navHeight + 20}px`;
+            });
+        }
+
+        // 初始化及窗口变化监听
+        window.addEventListener('resize', adjustContainerMargin);
+        adjustContainerMargin();
+    </script>
+</body>
+</html>
