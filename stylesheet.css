@@ -38,6 +38,8 @@ nav a:hover {
 .nav-desktop {
     display: flex;
     align-items: center; /* 垂直居中 */
+    max-width: 1200px;
+    margin: 0 auto 0;
 }
 
 .nav-desktop .title {
