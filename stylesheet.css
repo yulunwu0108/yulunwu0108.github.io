@@ -134,7 +134,7 @@ nav a:hover {
 .social-link.github { color: #333; }
 .social-link.twitter { color: #1da1f2; }
 .social-link.linkedin { color: #0a66c2; }
-.social-link.cv { color: #2c3e50; }
+.social-link.cv { color: #34495e; }
 
 /* 内容区块 */
 .section {
@@ -224,7 +224,7 @@ h2 {
 
 /* 基础链接样式 */
 a {
-color: #778899;
+color: #21618c;
 text-decoration: none;
 transition: all 0.2s ease;
 }
@@ -234,7 +234,7 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-color: #778899;
+color: #21618c;
 }
 
 /* 悬停交互效果 */
@@ -245,6 +245,8 @@ border-radius: 3px;
 
 /* 特殊样式示例 */
 .button-link {
+color: #778899 !important;
+/* font-weight: bold; */
 padding: 8px 16px;
 border: 2px solid #2c3e50;
 border-radius: 4px;
