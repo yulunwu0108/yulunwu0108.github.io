@@ -91,9 +91,9 @@ nav a:hover {
 .profile-img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 0px; /* 50%; */
     object-fit: cover;
-    border: 3px solid #999;
+    /*border: 3px solid #999;*/
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
