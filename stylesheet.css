@@ -93,7 +93,6 @@ nav a:hover {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    /*border: 3px solid #999;*/
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -118,8 +117,8 @@ nav a:hover {
 }
 
 .social-link:hover {
-    transform: translateY(-2px);
-    background: rgba(0,0,0,0.05);
+    transform: translateY(-1px);
+    background: #fafafa;
 }
 
 .social-link i {
@@ -177,14 +176,15 @@ h2 {
     gap: 2rem;
     align-items: flex-start;
     padding: 1.5rem;
-    background: #f8f8f8;
+    /* background: #f8f8f8; */
     border-radius: 8px;
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
 }
 
 .publication-item:hover {
-    transform: translateX(10px);
+    transform: translateX(1px);
+    background: #fafafa;
 }
 
 .publication-content {
@@ -202,6 +202,7 @@ h2 {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: relative;
+    background-color: #fff;
 }
 
 .publication-figure img {
@@ -221,6 +222,46 @@ h2 {
     padding: 0.5rem;
     font-size: 0.8em;
     text-align: center;
+}
+
+.education-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.education-list li {
+    margin-top: 1.5rem;
+    padding-left: 1rem;
+    /* border-left: 3px solid #999; */
+}
+
+.education-item {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.education-img {
+    width: 120px;
+    height: 120px;
+}
+
+.education-content {
+    flex: 1;
+    min-width: 60%;
+    padding-left: 3rem;
+}
+
+.education-content h4 {
+    padding-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-university {
+    display: flex;                /* 启用Flex布局 */
+    justify-content: space-between; /* 两端对齐 */
+    width: 100%;
+    padding-bottom: 1rem;
 }
 
 /* 基础链接样式 */
