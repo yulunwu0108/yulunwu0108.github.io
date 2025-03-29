@@ -163,6 +163,7 @@ h2 {
 .publication-list {
     list-style: none;  /* 新增 */
     padding-left: 0;   /* 新增 - 移除默认缩进 */
+    margin-bottom: -1rem;
 }
 
 .publication-list li {
