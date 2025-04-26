@@ -96,6 +96,11 @@ nav a:hover {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.emails {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
 /* 新增社交媒体样式 */
 .social-links {
     margin-top: 1rem;
