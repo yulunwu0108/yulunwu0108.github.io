@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="323.07999"
+   height="466.66666"
+   viewBox="0 0 323.07999 466.66666"
+   sodipodi:docname="Illinois_logo_fullcolor_rgb.eps"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="323.07999"
+       height="466.66666"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1">
+    <g
+       id="group-R5">
+      <path
+         id="path2"
+         d="m 1884.63,807.691 h 403.84 V 134.629 H 134.586 v 673.062 h 403.887 c 74.281,0 134.586,60.301 134.586,134.629 v 1615.37 c 0,74.37 -60.305,134.63 -134.586,134.63 H 134.586 v 673.05 H 2288.47 v -673.05 h -403.84 c -74.37,0 -134.63,-60.26 -134.63,-134.63 V 942.32 c 0,-74.328 60.26,-134.629 134.63,-134.629 z M 2423.06,2557.69 V 3500 H 0 V 2557.69 H 538.473 V 942.32 L 0,942.32 V 0 h 2423.06 v 942.32 h -538.43 v 1615.37 h 538.43"
+         style="fill:#13294b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="matrix(0.13333333,0,0,-0.13333333,0,466.66667)" />
+      <path
+         id="path3"
+         d="m 1884.63,2692.32 h 403.84 v 673.05 H 134.586 v -673.05 h 403.887 c 74.281,0 134.586,-60.26 134.586,-134.63 V 942.32 c 0,-74.328 -60.305,-134.629 -134.586,-134.629 H 134.586 V 134.629 H 2288.47 v 673.062 h -403.84 c -74.37,0 -134.63,60.301 -134.63,134.629 v 1615.37 c 0,74.37 60.26,134.63 134.63,134.63"
+         style="fill:#ff5f05;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="matrix(0.13333333,0,0,-0.13333333,0,466.66667)" />
+    </g>
+  </g>
+</svg>
