@@ -287,6 +287,12 @@ h2 {
     padding-bottom: 1rem;
 }
 
+.education-time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 /* 基础链接样式 */
 a {
     color: #21618c;
