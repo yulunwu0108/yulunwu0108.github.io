@@ -1,71 +1,109 @@
-/* 基础样式重置 */
+/* === Base === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --text-muted: #555555;
+    --text-light: #888888;
+    --border: #e5e5e5;
+    --link-underline: #cccccc;
+    --section-spacing: 2.5rem;
+    --section-title-gap: 1.25rem;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background-color: var(--bg);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* 导航样式 */
+p {
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* === Navigation === */
 nav {
-    background-color: #333;
-    padding: 1rem;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.9rem 1.5rem;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* 确保最高堆叠顺序 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 
-nav a {
-    color: #fff;
+nav a,
+nav a:link,
+nav a:visited {
+    color: var(--text);
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
 }
 
-/* nav a:hover {
-    color: #f5f5f5;
-} */
+nav a:hover {
+    color: var(--text-light);
+}
 
-/* 桌面导航样式 */
 .nav-desktop {
     display: flex;
-    align-items: center; /* 垂直居中 */
-    max-width: 1200px;
-    margin: 0 auto 0;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .nav-desktop .title {
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-left: 1rem;
-    margin-right: 3rem; /* 距离其他导航链接的间距 */
+    margin-right: auto;
+}
+
+.nav-desktop .title a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-desktop .title h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--text);
+    line-height: 1.2;
+    margin: 0;
 }
 
 .nav-desktop ul {
     list-style: none;
     display: flex;
-    justify-content: start;
+    align-items: center;
     gap: 2rem;
 }
 
-/* 移动端汉堡菜单按钮 */
 .hamburger {
     display: none;
     cursor: pointer;
-    color: #fff;
-    font-size: 1.5rem;
+    color: var(--text);
+    font-size: 1.4rem;
 }
 
-/* 移动端导航样式 */
 .nav-mobile {
     display: none;
     flex-direction: column;
@@ -73,141 +111,210 @@ nav a {
     padding-top: 1rem;
 }
 
-/* 主要内容区域 */
+.nav-mobile ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* === Layout === */
 .container {
-    max-width: 1200px;
-    margin: 80px auto 0;
+    max-width: 960px;
+    margin: 0 auto;
     padding: 1.5rem;
 }
 
-/* 头部简介 */
+.section {
+    background: transparent;
+    padding: var(--section-spacing) 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid var(--border);
+}
+
+.section:first-of-type {
+    padding-top: var(--section-spacing);
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+/* === Profile === */
 .profile-header {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    /* margin-bottom: 1rem; */
+    gap: 2.5rem;
 }
 
 .profile-image-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem; /* Adjust the space between image and text */
-}
-
-.profile-caption {
-    font-style: italic;
-    color: #666;
-    font-size: 0.9rem;
+    gap: 0.5rem;
+    flex-shrink: 0;
 }
 
 .profile-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile-caption {
+    color: var(--text-light);
+    font-style: normal;
+    font-size: 0.85rem;
 }
 
 .emails {
     display: flex;
-    margin-top: -0.5rem;
+    margin-top: -0.25rem;
     margin-bottom: 0.5rem;
-    font-family: 'Consolas', 'Menlo', monospace;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.85rem;
 }
 
-/* 新增社交媒体样式 */
-.social-links {
-    margin-top: 1rem;
-    margin-bottom: -1rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: start;
-}
-
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #444;
-    text-decoration: none;
-    transition: transform 0.2s ease;
-    padding: 0.5rem;
-    border-radius: 4px;
-}
-
-.social-link:hover {
-    transform: translateY(-1px);
-    background: #fafafa;
-}
-
-.social-link i {
-    font-size: 1rem;
-    width: 1.2em;
-    text-align: center;
-}
-
-/* 特定平台颜色 */
-.social-link.email { color: #666; }
-.social-link.scholar { color: #4285f4; }
-.social-link.github { color: #333; }
-.social-link.twitter { color: #1da1f2; }
-.social-link.linkedin { color: #0a66c2; }
-.social-link.x { color: #000; }
-.social-link.cv { color: #34495e; }
-
-/* 内容区块 */
-.section {
-    background: #fff;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    /* scroll-margin-top: 80px; 为整个区块添加额外边距 */
-}
-
+/* === Headings === */
 h1 {
-    color: #222;
-    margin-bottom: 1rem;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
 }
 
 h2 {
-    color: #444;
-    margin-top: -0.5rem;
-    margin-bottom: 1.2rem;
-    border-bottom: 2px solid #666;
-    padding-bottom: 0.5rem;
-    /* scroll-margin-top: 80px; 根据导航栏实际高度调整 */
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: var(--section-title-gap);
+    padding-bottom: 0;
+    border-bottom: none;
+    letter-spacing: -0.005em;
 }
 
-/* 出版物列表 */
+h3 {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+}
+
+/* === Social links (flat) === */
+.social-links {
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.social-link,
+.social-link:link,
+.social-link:visited {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0;
+    border-radius: 0;
+    transition: color 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--text);
+    background: transparent;
+    transform: none;
+}
+
+.social-link i {
+    font-size: 0.95rem;
+    width: 1em;
+    text-align: center;
+    color: inherit;
+}
+
+.social-link span {
+    color: inherit;
+}
+
+/* Unify platform colors for minimalist row */
+.social-link.email,
+.social-link.scholar,
+.social-link.github,
+.social-link.twitter,
+.social-link.linkedin,
+.social-link.x,
+.social-link.cv {
+    color: var(--text-muted);
+}
+
+/* === Generic links === */
+a,
+a:link,
+a:visited {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: var(--link-underline);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s ease;
+}
+
+a:hover,
+a:active {
+    color: var(--text);
+    text-decoration-color: var(--text);
+}
+
+/* === Publications === */
 .publication-list {
-    list-style: none;  /* 新增 */
-    padding-left: 0;   /* 新增 - 移除默认缩进 */
-    margin-bottom: -1rem;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
 }
 
 .publication-list li {
-    margin-bottom: 1.5rem;
-    padding-left: 1rem;
-    border-left: 3px solid #999;
+    margin-bottom: 0;
+    padding-left: 0;
+    border-left: none;
 }
 
 .publication-item {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
-    padding: 1rem;
-    /* background: #f8f8f8; */
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease;
+    padding: 1.5rem 0;
+    background: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    transition: none;
+}
+
+.publication-list li:first-child .publication-item {
+    padding-top: 0;
 }
 
 .publication-item:hover {
-    transform: translateX(1px);
-    background: #fafafa;
+    transform: none;
+    background: transparent;
 }
 
 .publication-content {
@@ -215,126 +322,162 @@ h2 {
     min-width: 60%;
 }
 
+.publication-content .authors {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.publication-content .journal {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
 .publication-content .link {
-    margin-top: 1rem;
+    margin-top: 0.85rem;
+}
+
+.publication-content .link p {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.publication-content em {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+.oral-highlight,
+a.oral-highlight:link,
+a.oral-highlight:visited,
+.publication-content em.oral-highlight {
+    color: #c81e1e;
+    font-weight: 600;
+}
+
+a.oral-highlight:hover,
+a.oral-highlight:active {
+    color: #a4161a;
+    text-decoration-color: #a4161a;
 }
 
 .publication-figure {
-    flex: 0 0 220px;
-    border-radius: 6px;
+    flex: 0 0 200px;
+    border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
     position: relative;
-    background-color: #fff;
 }
 
 .publication-figure img {
     width: 100%;
-    height: 150px;
+    height: 130px;
     object-fit: contain;
-    border-radius: 6px;
+    border-radius: 0;
+    display: block;
 }
 
-/* .figure-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,0.7);
-    color: white;
-    padding: 0.5rem;
-    font-size: 0.8em;
-    text-align: center;
-} */
-
+/* === Education === */
 .education-list {
     list-style: none;
     padding-left: 0;
 }
 
 .education-list li {
-    margin-top: 1.5rem;
-    padding-left: 1rem;
-    /* border-left: 3px solid #999; */
+    margin-top: 1.75rem;
+    padding-left: 0;
+}
+
+.education-list li:first-child {
+    margin-top: 0;
 }
 
 .education-item {
     display: flex;
     width: 100%;
     align-items: flex-start;
+    gap: 1.5rem;
 }
 
 .education-img {
-    width: 120px;
+    width: 80px;
     height: auto;
     max-width: 100%;
-    object-position: center center;
-    align-self: center;
-    display: block;
     object-fit: contain;
+    flex-shrink: 0;
+    align-self: center;
 }
 
 .education-content {
     flex: 1;
     min-width: 60%;
-    padding-left: 3rem;
+    padding-left: 0;
 }
 
 .education-content h4 {
-    padding-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    padding-top: 0;
+    margin-bottom: 0.4rem;
+}
+
+.education-content p {
+    margin-bottom: 0;
 }
 
 .education-university {
-    display: flex;                /* 启用Flex布局 */
-    justify-content: space-between; /* 两端对齐 */
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    padding-bottom: 1rem;
+    padding-bottom: 0.25rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
 .education-time {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    color: var(--text-light);
+    font-size: 0.9rem;
 }
 
-/* 基础链接样式 */
-a {
-    color: #21618c;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-/* 所有状态统一颜色 */
-a:link,
-a:visited,
-a:hover,
-a:active {
-    color: #21618c;
-}
-
-/* 悬停交互效果 */
-/* a:hover {
-    background: rgba(44, 62, 80, 0.05);
+/* === Buttons (flat) === */
+.button-link,
+.button-link:link,
+.button-link:visited {
+    color: var(--text-muted) !important;
+    padding: 3px 10px;
+    border: 1px solid var(--border);
     border-radius: 3px;
-} */
-
-/* 特殊样式示例 */
-.button-link {
-    color: #778899 !important;
-    /* font-weight: bold; */
-    padding: 8px 16px;
-    border: 2px solid #2c3e50;
-    border-radius: 4px;
     display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 1.5;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .button-link:hover {
-    background: #2c3e50;
-    color: white !important;
+    background-color: var(--text);
+    color: var(--bg) !important;
+    border-color: var(--text);
+    text-decoration: none;
 }
 
-/* 响应式设计 */
+/* News bold labels stand out a touch */
+.section b {
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* === Responsive === */
 @media (max-width: 768px) {
     .nav-desktop {
         display: none;
@@ -345,7 +488,7 @@ a:active {
     }
 
     nav.active {
-        height: 100vh; /* 展开时占满屏幕高度 */
+        height: 100vh;
         overflow-y: auto;
     }
 
@@ -356,11 +499,12 @@ a:active {
     .profile-header {
         flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
     }
 
     .social-links {
         justify-content: center;
-        gap: 1rem;
+        gap: 1.25rem;
     }
 
     .publication-item {
@@ -375,5 +519,25 @@ a:active {
 
     .publication-figure img {
         height: auto;
+        max-height: 200px;
+    }
+
+    .education-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .education-img {
+        width: 60px;
+    }
+
+    .education-university,
+    .education-time {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.5rem;
     }
 }
